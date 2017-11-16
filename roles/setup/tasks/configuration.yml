@@ -17,19 +17,19 @@
     dest: "{{general.local_home}}/.oh-my-zsh/themes/dracula.zsh-theme"
     state: link
 
-- name: setting up emacs with spacemacs 
-  git:
-    repo: https://github.com/syl20bnr/spacemacs
-    dest: "{{general.local_home}}/.emacs.d"
-
-- name: create workspace directories
+- name: create projects directories
   file:
-    path: "{{general.local_home}}/workspace"
+    path: "{{general.local_home}}/projects"
     state: directory
 
 - name: create GOPATH directory
   file:
-    path: "{{general.local_home}}/workspace/go"
+    path: "{{general.local_home}}/projects/go"
+    state: directory
+
+- name: create vim-plug directory
+  file:
+    path: "{{general.local_home}}/.local/share/nvim/site/autoload"
     state: directory
 
 - name: setting up vim-plug
