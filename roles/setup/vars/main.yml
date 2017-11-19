@@ -12,14 +12,23 @@ applications:
   - httpie
   - curl
   - wget
-  #- zsh
   - go
   - vim
-  - macvim
   - fish
-  #- neovim
+  - socat
 
 # homebrew cask applications
 cask_applications:
   - google-chrome
   - docker
+  - macvim
+
+downloads:
+   senchacmd:
+     name: Sencha Cmd
+     url: http://cdn.sencha.com/cmd/6.5.2/no-jre/SenchaCmd-6.5.2-osx-no_jre.app.zip
+     dest: "{{general.local_home}}/Downloads/SenchaCmd-6.5.2-osx-no_jre.app.zip"
+   toolbox:
+     name: Jetbrains Toolbox
+     url: https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.6.2914.dmg
+     dest: "{{general.local_home}}/Downloads/jetbrains-toolbox-1.6.2914.dmg"
