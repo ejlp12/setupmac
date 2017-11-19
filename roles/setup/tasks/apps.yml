@@ -1,11 +1,14 @@
 ---
-# make sure homebrew is installed, update brew and install applications 
-
 - name: homebrew
   include: homebrew.yml
 
 - name: sdkman
   include: sdkman.yml
+
+- name: installing sdkman applications
+  command: bash -lc "sdk install {{item}}"
+  sudo: no
+  with_items: "{{sdkman_applications}}"
 
 - name: getting downloads
   get_url:

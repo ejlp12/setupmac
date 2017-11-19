@@ -11,11 +11,6 @@
   file: state=touch path={{general.local_home}}/.profile
   sudo: no
 
-- name: Add sdkman in .bashrc
+- name: Add sdkman in .profile
   lineinfile: dest={{general.local_home}}/.profile regexp="\/.sdkman/bin\/sdkman\-init\.sh" line='[[ -s "{{sdkman.folder}}/bin/sdkman-init.sh" && ! $(which sdkman-init.sh) ]] && source "{{sdkman.folder}}/bin/sdkman-init.sh"'
   sudo: no
-
-#- name: Installing gradle
-#  # This will read your bash profile file, which would setup sdkman-init.sh.
-#  command: bash -lc "sdk install gradle {{gradle_version}}"
-#  sudo: no

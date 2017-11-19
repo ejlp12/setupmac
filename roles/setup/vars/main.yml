@@ -27,10 +27,14 @@ cask_applications:
   - docker
   - macvim
 
+sdkman_applications:
+  - gradle
+  - maven
+  - groovy
+
 appversions:
   senchacmd: 6.5.2
   toolbox: 1.6.2914
-  gradle: 2.3
 
 downloads:
   senchacmd:
