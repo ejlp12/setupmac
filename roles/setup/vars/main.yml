@@ -3,6 +3,10 @@
 general:
   local_home: "{{ lookup('env','HOME') }}"
 
+sdkman:
+  install_url: http://get.sdkman.io
+  folder: "{{general.local_home}}/.sdkman"
+
 # homebrew applications
 applications:
   - ranger
@@ -26,17 +30,22 @@ cask_applications:
 appversions:
   senchacmd: 6.5.2
   toolbox: 1.6.2914
+  gradle: 2.3
 
 downloads:
-   senchacmd:
-     name: Sencha Cmd
-     url: "http://cdn.sencha.com/cmd/{{appversions.senchacmd}}/no-jre/SenchaCmd-{{appversions.senchacmd}}-osx-no_jre.app.zip"
-     dest: "{{general.local_home}}/Downloads/SenchaCmd-{{appversions.senchacmd}}-osx-no_jre.app.zip"
-   toolbox:
-     name: Jetbrains Toolbox
-     url: "https://download.jetbrains.com/toolbox/jetbrains-toolbox-{{appversions.toolbox}}.dmg"
-     dest: "{{general.local_home}}/Downloads/jetbrains-toolbox-{{appversions.toolbox}}.dmg"
-   paw:
-     name: Paw
-     url: https://paw.cloud/download
-     dest: "{{general.local_home}}/Downloads/Paw.zip"
+  senchacmd:
+    name: Sencha Cmd
+    url: "http://cdn.sencha.com/cmd/{{appversions.senchacmd}}/no-jre/SenchaCmd-{{appversions.senchacmd}}-osx-no_jre.app.zip"
+    dest: "{{general.local_home}}/Downloads"
+  toolbox:
+    name: Jetbrains Toolbox
+    url: "https://download.jetbrains.com/toolbox/jetbrains-toolbox-{{appversions.toolbox}}.dmg"
+    dest: "{{general.local_home}}/Downloads"
+  paw:
+    name: Paw
+    url: https://paw.cloud/download
+    dest: "{{general.local_home}}/Downloads"
+  gittower:
+    name: Git Tower
+    url: https://fournova-app-updates.s3.amazonaws.com/apps/tower2-mac/355-a7440d07/Tower-2-2.6.3-355.zip
+    dest: "{{general.local_home}}/Downloads"
