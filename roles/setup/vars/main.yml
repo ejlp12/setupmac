@@ -5,13 +5,14 @@ general:
 
 # homebrew applications
 applications:
+  - ranger
   - autojump
   - git
   - tree
   - httpie
   - curl
   - wget
-  - zsh
+  #- zsh
   - go
   - vim
   - neovim

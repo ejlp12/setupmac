@@ -1,4 +1,4 @@
----
+
 # install and update homebrew and cask
 
 - name: install homebrew
@@ -10,6 +10,11 @@
   homebrew:
     state: latest
     update_homebrew: yes
+
+- name: upgrade all packages 
+  homebrew:
+    upgrade_all: yes
+
 
 - name: tap homebrew caskroom/cask
   homebrew_tap:
