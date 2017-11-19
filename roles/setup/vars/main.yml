@@ -15,7 +15,9 @@ applications:
   #- zsh
   - go
   - vim
-  - neovim
+  - macvim
+  - fish
+  #- neovim
 
 # homebrew cask applications
 cask_applications:
