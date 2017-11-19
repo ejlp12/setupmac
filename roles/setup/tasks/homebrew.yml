@@ -15,7 +15,6 @@
   homebrew:
     upgrade_all: yes
 
-
 - name: tap homebrew caskroom/cask
   homebrew_tap:
     tap: "caskroom/cask"
