@@ -1,37 +1,4 @@
 ---
-# list of applications to install
-general:
-  local_home: "{{ lookup('env','HOME') }}"
-
-sdkman:
-  install_url: http://get.sdkman.io
-  folder: "{{general.local_home}}/.sdkman"
-
-# homebrew applications
-applications:
-  - ranger
-  - autojump
-  - git
-  - tree
-  - httpie
-  - curl
-  - wget
-  - go
-  - vim
-  - fish
-  - socat
-
-# homebrew cask applications
-cask_applications:
-  - google-chrome
-  - docker
-  - macvim
-
-sdkman_applications:
-  - gradle
-  - maven
-  - groovy
-
 appversions:
   senchacmd: 6.5.2
   toolbox: 1.6.2914
@@ -56,3 +23,4 @@ downloads:
   nerdfont:
     name: Inconsolata
     url: https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Inconsolata/complete/Inconsolata%20Nerd%20Font%20Complete%20Mono.otf?raw=true
+    dest: "{{general.local_home}}/Downloads"

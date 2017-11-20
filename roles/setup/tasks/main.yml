@@ -2,8 +2,11 @@
   tags: dotfiles
   include: dotfiles.yml
 
-- name: application installs
-  include: apps.yml 
+- name: getting downloads
+  get_url:
+    url: "{{item.value.url}}"
+    dest: "{{item.value.dest}}"
+  with_dict: "{{downloads}}"
 
 - name: configuration
   include: configuration.yml

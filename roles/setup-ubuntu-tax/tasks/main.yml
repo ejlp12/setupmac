@@ -2,8 +2,5 @@
   tags: dotfiles
   include: dotfiles.yml
 
-- name: application installs
-  include: apps.yml 
-
 - name: configuration
   include: configuration.yml

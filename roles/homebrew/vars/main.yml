@@ -1,0 +1,20 @@
+---
+# homebrew applications
+applications:
+  - ranger
+  - autojump
+  - git
+  - tree
+  - httpie
+  - curl
+  - wget
+  - go
+  - vim
+  - fish
+  - socat
+
+# homebrew cask applications
+cask_applications:
+  - google-chrome
+  - docker
+  - macvim

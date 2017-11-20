@@ -1,0 +1,2 @@
+general:
+  local_home: "{{ lookup('env','HOME') }}"

@@ -1,8 +1,0 @@
----
-- name: sdkman
-  include: sdkman.yml
-
-- name: installing sdkman applications
-  command: bash -lc "sdk install {{item}}"
-  sudo: no
-  with_items: "{{sdkman_applications}}"
