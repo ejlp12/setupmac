@@ -26,10 +26,3 @@
   copy:
     src: dotfiles/omf.fish
     dest: "{{general.local_home}}/.config/fish/conf.d/omf.fish"
-
-- stat: path={{ fonts_dir }}/{{ font_filename }}
-  register: st
-  changed_when: false
-
-- get_url: url={{ font_url }} dest={{ fonts_dir }}/{{ font_filename }}
-  when: not st.stat.exists

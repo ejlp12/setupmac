@@ -1,0 +1,32 @@
+- stat: path={{ fonts_dir }}/{{ font_filename }}
+  register: st
+  changed_when: false
+
+- get_url: url={{ font_url }} dest={{ fonts_dir }}/{{ font_filename }}
+  when: not st.stat.exists
+
+- name: Get current Terminal profile.
+  shell: defaults read com.apple.Terminal 'Default Window Settings'
+  register: terminal_theme
+  changed_when: false
+
+- name: Ensure custom Terminal profile is added.
+  shell: open /Users/bent/Downloads/Monokai_Fish_OSX/Monokai.terminal
+  changed_when: false
+  when: "'Monokai' not in terminal_theme.stdout"
+
+- name: Ensure custom Terminal profile is set as default.
+  shell: "{{ item }}"
+  with_items:
+    - defaults write com.apple.Terminal 'Default Window Settings' -string 'Monokai'
+    - defaults write com.apple.Terminal 'Startup Window Settings' -string 'Monokai'
+    - osascript -e "tell application \"Terminal\" to set the font name of window 1 to \"Inconsolata Nerd Font Complete Mono\""
+    - osascript -e "tell application \"Terminal\" to set the font size of window 1 to 15"
+    - fish /Users/bent/Downloads/Monokai_Fish_OSX/set_colors.fish
+  changed_when: false
+  when: "'Monokai' not in terminal_theme.stdout"
+
+
+#Bents-MacBook-Pro-2:~ bent$ osascript -e "tell application \"Terminal\" to set the font name of window 1 to \"Inconsolata Nerd Font Complete Mono\""
+#Bents-MacBook-Pro-2:~ bent$ osascript -e "tell application \"Terminal\" to set the font size of window 1 to 15"
+#fish set_colors.fish

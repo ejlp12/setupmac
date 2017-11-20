@@ -1,6 +1,3 @@
 - name: dotfiles
   tags: dotfiles
   include: dotfiles.yml
-
-- name: configuration
-  include: configuration.yml
