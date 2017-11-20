@@ -27,8 +27,3 @@
   when: is_bobthefish_installed.stdout == "no"
   shell: echo "omf install bobthefish" | fish
   sudo: no
-
-- name: fish config
-  copy:
-    src: dotfiles/omf.fish
-    dest: "{{general.local_home}}/.config/fish/conf.d/omf.fish"
