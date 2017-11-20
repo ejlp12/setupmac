@@ -1,6 +1,6 @@
 ---
 - hosts: local
   roles:
+    - setup-ubuntu-tax
     - fish
     - sdkman
-    - setup-ubuntu-tax

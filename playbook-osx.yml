@@ -1,7 +1,7 @@
 ---
 - hosts: local
   roles:
+    - setup-osx
+    - sdkman
     - homebrew
     - fish
-    - sdkman
-    - setup-osx

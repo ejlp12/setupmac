@@ -8,3 +8,6 @@ source $OMF_PATH/init.fish
 
 set -g -x fish_greeting ''
 set -g theme_nerd_fonts yes
+
+set -gx PATH $PATH ~/devtools/Sencha/Cmd/
+set -gx PATH $PATH ~/bin
