@@ -1,7 +1,7 @@
 ---
 - hosts: local
   roles:
+    - fish
     - homebrew
     - sdkman
-    - fish
     - setup
