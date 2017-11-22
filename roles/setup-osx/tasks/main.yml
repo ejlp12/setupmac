@@ -2,11 +2,12 @@
   tags: dotfiles
   include: dotfiles.yml
 
-#- name: terminal
-#  tags: terminal
-#  include: terminal.yml
+- name: terminal
+  tags: terminal
+  include: terminal.yml
 
 - name: getting downloads
+  tags: downloads
   get_url:
     url: "{{item.value.url}}"
     dest: "{{item.value.dest}}"
