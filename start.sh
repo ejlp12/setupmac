@@ -26,7 +26,7 @@ echo "Setting up your mac using bentsolheim/setupmac"
 echo "==========================================="
 
 sudo easy_install pip
-sudo easy_install ansible
+sudo pip install ansible
 
 installdir="/tmp/setupmac-$RANDOM"
 mkdir $installdir
