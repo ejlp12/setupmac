@@ -1,0 +1,21 @@
+---
+- hosts: local
+  tasks:
+    - git:
+        repo: "git@github.com:kodehuset/{{item}}"
+        dest: "{{general.local_home}}/projects/{{item}}"
+        update: yes
+      with_items:
+        - here-main
+        - here-web
+        - here-server
+        - hydro-ets-api
+        - base-image-java
+        - gradle-docker-plugin
+        - here-mysql-docker
+        - here-mysql-backup
+        - wout-web
+        - wout-api
+        - kodehuset-report-engine
+        - kodehuset-test-setup
+
