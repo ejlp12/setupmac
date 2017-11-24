@@ -2,10 +2,8 @@ export EDITOR=vim
 
 export PATH=/usr/local/bin:$PATH
 
-export VIM_APP_DIR=/Applications/MacVim
-export SENCHA_CMD="~/home/devtools/Sencha/Cmd"
+export SENCHA_CMD="~/bin/Sencha/Cmd"
 
-export PATH=$PATH:$VIM_APP_DIR:~/bin
 export PATH=$SENCHA_CMD:$PATH
 
 export MAVEN_OPTS="-Xmx512m -Dfile.encoding=UTF8"
