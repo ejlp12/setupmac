@@ -26,6 +26,5 @@
     - defaults write com.apple.Terminal 'Default Window Settings' -string 'Monokai_Inconsolata'
     - defaults write com.apple.Terminal 'Startup Window Settings' -string 'Monokai_Inconsolata'
     - "fish {{general.local_home}}/Downloads/Monokai_Fish_OSX/set_colors.fish"
-    - killall Terminal
   changed_when: false
   when: "'Monokai_Inconsolata' not in terminal_theme.stdout"
