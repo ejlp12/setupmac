@@ -12,6 +12,7 @@ applications:
   - vim
   - fish
   - socat
+  - watch
 
 # homebrew cask applications
 cask_applications:
