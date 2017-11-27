@@ -8,3 +8,15 @@
     url: "{{item.value.url}}"
     dest: "{{item.value.dest}}"
   with_dict: "{{downloads}}"
+
+# This task will fix an issue with IntelliJ being slow to start applications
+- name: hosts file
+  tags: hostsfile
+  become: true
+  lineinfile:
+    path: /etc/hosts
+    regexp: '^127\.0\.0\.1 localhost .*.local'
+    line: "127.0.0.1 localhost {{ansible_hostname}}.local"
+    owner: root
+    group: wheel
+    mode: 0644
