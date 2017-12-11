@@ -5,6 +5,7 @@
     - setup-osx
     - sdkman
     - homebrew
+    - python
     - fish
     - terminal
 

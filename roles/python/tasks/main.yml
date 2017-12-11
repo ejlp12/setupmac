@@ -1,0 +1,8 @@
+- name: install python packages
+  tags: python
+  become: true
+  pip:
+    name: "{{item}}"
+  with_items:
+    - boto
+    - boto3
