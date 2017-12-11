@@ -8,3 +8,8 @@
   copy:
     src: dotfiles/dot.gitconfig
     dest: "{{general.local_home}}/.gitconfig"
+
+- name: .gitignore_global file
+  copy:
+    src: dotfiles/dot.gitignore_global
+    dest: "{{general.local_home}}/.gitignore_global"
