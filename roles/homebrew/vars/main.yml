@@ -13,9 +13,19 @@ applications:
   - fish
   - socat
   - watch
+  - htop
+  - jq
+  - tree
+  - httpie
+  - coreutils
+  - bash
+  - socat
 
 # homebrew cask applications
 cask_applications:
   - google-chrome
   - docker
   - macvim
+  - iterm2
+  - vagrant
+  - filezilla
